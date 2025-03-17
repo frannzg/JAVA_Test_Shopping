@@ -4,13 +4,15 @@ public class Employee {
     private int age;
     private String category;
     private boolean isMandated;
+    private Work work;
 
-    public Employee(String name, String lastName, int age, String categoty, boolean isMandated){
+    public Employee(String name, String lastName, int age, String categoty, boolean isMandated, Work work){
         this.name = name;
         this.lastName = lastName;
         this.age = age;
         this.category = categoty;
         this.isMandated = isMandated;
+        this.work = work;
     }
 
     public String getName() {
@@ -57,14 +59,23 @@ public class Employee {
         this.isMandated = isMandated;
     }
 
+    public Work getWork() {
+        return work;
+    }
+
+    public void setWork(Work work) {
+        this.work = work;
+    }
+
     @Override
     public String toString() {
         return "employee{" +
-                "name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                ", category='" + category + '\'' +
-                ", isMandated=" + isMandated +
+                "name = '" + name + '\'' +
+                ", lastName = '" + lastName + '\'' +
+                ", age = " + age +
+                ", category = '" + category + '\'' +
+                ", isMandated = " + isMandated + "\n" +
+                ", Work = " + work +
                 '}';
     }
 
