@@ -1,0 +1,1 @@
+Esto es un prueba con java para aprender por mi cuenta este lenguaje de programación. Es un simulador que simula ventas de productos con ordenes de una compra a un cliente y un sistema de empleados a una empresa.
