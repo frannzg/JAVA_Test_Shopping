@@ -1,10 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Test {
     public static  void main(String[] args) {
-        Scanner keyboard = new Scanner(System.in);
 
         //Items
         Item water = new Item("Water", "Drink for hidratation", 2.50, 6);
@@ -14,6 +12,27 @@ public class Test {
 
         //Works
         Work developer = new Work("Software Development", 3000.0);
+        Work developer1 = new Work("Software Development", 7000.0);
+        Work developer2 = new Work("Software Development", 5000.0);
+
+
+        Work[] works = {developer, developer1, developer2};
+
+       for (Work work : works){
+        System.out.println("Position: " +
+         work.getName() + ", Salary: $" + 
+         work.getSalary());
+       }
+
+       Inventory storeInventory = new Inventory();
+       // Add items to inventory
+       storeInventory.addItem(new Item("Laptop", "High-end laptop", 999.99, 5));
+       storeInventory.addItem(new Item("Mouse", "Wireless mouse", 29.99, 20));
+
+
+
+
+
 
         //Employees
         Employee developerSoftware = new Employee ("Carlos", "Martinez", 15, "Developer", false, developer);
@@ -40,12 +59,7 @@ public class Test {
             System.out.println("Compra exitosa! Saldo restante: $" + Juan.getMoneyOnHand());
         } else {
             System.out.println("Saldo insuficiente para completar la compra");
-        }
-
-
-      
-
-        
+        } 
 }
 
 }
